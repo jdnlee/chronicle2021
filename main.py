@@ -1,6 +1,9 @@
 from tkinter import *
 import tkinter.ttk as ttk
 import csv
+from htmlPulling import *
+
+write_csv()
 
 root = Tk()
 root.title("Weather")
