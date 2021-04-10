@@ -1,11 +1,14 @@
 from tkinter import *
+import tkinter as tk
 import tkinter.ttk as ttk
 import csv
 
 root = Tk()
-root.title("Weather")
-width = 700
+root.title("Canberra Weekly Weather")
+root.configure(bg="light blue")
+width = 1000
 height = 500
+
 screen_width = root.winfo_screenwidth()
 screen_height = root.winfo_screenheight()
 x = (screen_width/2) - (width/2)
@@ -14,15 +17,9 @@ root.geometry("%dx%d+%d+%d" % (width, height, x, y))
 root.resizable(0, 0)
 
 
-TableMargin = Frame(root, width=500)
+TableMargin = Frame(height=500, width=500)
 TableMargin.pack(side=TOP)
-scrollbarx = Scrollbar(TableMargin, orient=HORIZONTAL)
-scrollbary = Scrollbar(TableMargin, orient=VERTICAL)
-tree = ttk.Treeview(TableMargin, columns=("Date", "Temp", "Weather", "Rain"), height=400, selectmode="extended", yscrollcommand=scrollbary.set, xscrollcommand=scrollbarx.set)
-scrollbary.config(command=tree.yview)
-scrollbary.pack(side=RIGHT, fill=Y)
-scrollbarx.config(command=tree.xview)
-scrollbarx.pack(side=BOTTOM, fill=X)
+tree = ttk.Treeview(TableMargin, columns=("Date", "Temp", "Weather", "Rain"), height=300, selectmode="extended")
 tree.heading('Date', text="Date", anchor=W)
 tree.heading('Temp', text="Temp", anchor=W)
 tree.heading('Weather', text="Weather", anchor=W)
