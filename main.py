@@ -2,6 +2,9 @@ from tkinter import *
 import tkinter as tk
 import tkinter.ttk as ttk
 import csv
+from htmlPulling import *
+
+write_csv()
 
 root = Tk()
 root.title("Canberra Weekly Weather")
