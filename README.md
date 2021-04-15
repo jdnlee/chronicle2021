@@ -1,6 +1,6 @@
 # chronicle2021
 
-This repositiry is where our entry into the Chronicle Hackathon 2021 is kept. While we did not end up submitting the program, it was a valuable learning experience.
+This repository is where our entry into the Chronicle Hackathon 2021 is kept. While we did not end up submitting the program, it was a valuable learning experience.
 
 ## Requirements
 
